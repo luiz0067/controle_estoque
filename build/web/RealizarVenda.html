@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/src/venda.js"></script>
+<script type="text/javascript" src="js/jquery-plugins/validacao/jquery.validacao.js"></script>
+<title>Realizar Venda</title>
+</head>
+<body>
+<table width="456" border="0" class="tabela" align="center">
+<tr>
+  <th colspan="3" >Realizar Venda</th>
+  </tr>
+<tr>
+  <td colspan="3" >&nbsp;</td>
+  </tr>
+<tr>
+	<td align="right" >
+    <label for="produto">Produto:</label>	</td>
+	<td colspan="3" align="left">
+	  <input type="text" name="produto" id="produto"  size="45"/>	</td>
+  </tr>
+<tr>
+  <td align="right" ><label for="quantidade">Quantidade:</label></td>
+  <td align="left"><input type="text" name="quantidade" id="quantidade"  size="12" /></td>
+  <td align="right">
+  	<input type="button" name="adicionar" id="adicionar" value="Adicionar" onClick="venda.validaAdicionar('venda.adicionar()')" />  	
+  </td>
+  <td align="left"><input type="button" name="limpar" id="limpar" value="Limpar" onClick="venda.limparLista()" /></td>
+</tr>
+<tr>
+  <td align="center" colspan="4" ><div id="resultado"></div></td>
+</tr>
+<tr>
+<td align="right">
+<label for="formapgto">Forma de Pagamento</label></td>
+<td align="left">
+<input name="formapgto" type="text" id="formapgto" size="25" /></td>
+<td align="right" colspan="2"><input type="button" name="finalizar" id="finalizar" value="Finalizar" onClick="venda.finalizar()"/></td>
+</tr>
+</table>
+</body>
+</html>

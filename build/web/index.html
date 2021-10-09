@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Banca de Revistas Porto Seguro</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.2.1.js" ></script>
+<script type="text/javascript"  src="js/jquery-plugins/history/jquery.history.js" ></script>
+
+<script type="text/javascript">
+	function pageload(hash) {
+		if(hash) {
+			$("#pagina").load(hash + ".html");
+		}
+	}
+	
+	function voltar(link){
+		var hash = link;
+		hash = hash.replace(/^.*#/, '');
+		$("#carregando").show();
+		$.historyLoad(hash);
+		
+		$("#carregando").hide();
+	}
+	
+	$(document).ready(function(){
+		$.historyInit(pageload);
+		
+		$("a[@rel='history']").click(function(){
+			var hash = this.href;
+			hash = hash.replace(/^.*#/, '');
+			$("#carregando").show();
+			$.historyLoad(hash);
+			
+			$("#carregando").hide();		
+			return false;
+		});
+	});
+</script>
+
+</head>
+
+<body>
+<!-- MENSAGEM DE CARREGANDO -->
+<div id='carregando'>Carregando...</div>
+
+<div class="principal">
+	<div id="col1">	
+		<ul id="nav">        	
+			<li>
+				<a href="#GerenciarCliente" rel="history">
+					<img width="31" height="70" alt="Cliente" src="img/abaCliente.png"/>				</a>			</li>
+			<li>
+				<a href="#GerenciarProduto" rel="history">
+					<img width="31" height="70" alt="Produto" src="img/abaProduto.png"/>				</a>			</li>
+			<li>
+				<a href="#RealizarVenda" rel="history">
+					<img width="31" height="70" alt="Venda" src="img/abaVenda.png"/>				</a>			</li>
+			<li>
+				<a href="#ConsultarFluxo" rel="history">
+					<img width="31" height="69" alt="Caixa" src="img/abaCaixa.png"/>				</a>			</li>
+		</ul>	
+	</div>
+	
+	<div id="col2">
+		<div id="topo_esq"></div>
+		<div id="topo_cen"></div>
+		<div id="topo_dir"></div>
+		<div id="lado_esq"></div>
+		<div class="centro">
+			<div id="topo"></div>
+			<div id="pagina"></div>
+		</div> 
+	  	<div id="lado_dir"></div>	
+		<div id="fim_esq"></div>
+		<div id="fim_baixo"></div>
+		<div id="fim_dir"></div>
+	</div>	 
+</div>
+
+</body>
+</html>

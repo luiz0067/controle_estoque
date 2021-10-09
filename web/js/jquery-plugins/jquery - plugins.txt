@@ -1,0 +1,8 @@
+jquery.history.js -> http://www.mikage.to/jquery/jquery_history.html
+jquery.calendar.js -> http://jquerybrasil.com/calendario-com-jquery/
+jquery.maskedinput.js -> http://jquerybrasil.com/campo_de_formulario_com_mascara_jquery/
+jquery.validacao.js 
+jquery.curvycornes.js -> http://www.curvycorners.net/examples.php
+jquery.tablesorter.js -> http://rikrikrik.com/jquery/quicksearch/
+jquery.tabs2.js -> http://www.stilbuero.de/2006/11/05/tabs-version-2/
+jquery.png.js -> http://jquery.andreaseberhard.de/pngFix/

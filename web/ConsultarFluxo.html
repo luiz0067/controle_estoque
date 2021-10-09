@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Consultar Fluxo</title>
+
+<script type="text/javascript" src="js/src/venda.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.getScript("js/jquery-plugins/masked-input/jquery.maskedinput-1.1.1.js", function(){ 
+        	$('#datainicio').mask("99/99/9999");
+        	$('#datafim').mask("99/99/9999");        	
+        });
+    });
+</script>
+
+</head>
+<body>
+<center>
+	<table width="398" border="0" class="tabela">
+      <tr>
+        <th colspan="5">Consultar Fluxo</th>
+      </tr>
+      <tr>
+        <td colspan="5">&nbsp;</td>
+      </tr>
+      <tr>
+        <td><label for="datainicio">Data Inicio:</label></td>
+        <td><input name="datainicio" type="text" id="datainicio" size="9" /></td>
+		<td><label for="datafim">Data Fim:</label></td>
+        <td><input name="datafim" type="text" id="datafim" size="9" /></td>        
+        <td><input type="button" name="btn" value="Consultar" onClick="venda.consultar()"></td>
+      </tr>
+      <tr>
+        <td colspan="5"><div align="right">
+         </div></td>
+      </tr>
+  </table>
+	<br/>
+	<div id="resultado"></div>
+</center>
+</body>
+</html>
